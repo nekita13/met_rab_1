@@ -1,6 +1,8 @@
 print("hello")
 import os
 import random
+import time 
+time.sleep(2)
 os.system('cls' if os.name == 'nt' else 'clear')
 
 userI = input("""выберите сложность
@@ -17,23 +19,23 @@ def what(dif):
             samp = int(random.uniform(1 ,3))
             print(""" варианты ответа""")
             if samp == 1 : 
-                print("   1 :"+str(end) ) 
+                print("   1 +"+str(end) ) 
             else: 
                 print("   1 :"+str(end + int(random.uniform(1, 35)))) 
             
             if samp == 2 : 
-                print("   2 "+str(end) ) 
+                print("   2 +"+str(end) ) 
             else: 
                 print("   2 "+str(end + int(random.uniform(1, 25))) ) 
 
             if samp == 3 : 
-                print("   3 "+str(end) ) 
+                print("   3 +"+str(end) ) 
             else: print("   3 "+str(end + int(random.uniform(1, 50))) ) 
             
             
             userI = input("выберите ответ")
             
-            if samp == userI:
+            if str(samp) == userI:
                 print("молодец хорошая кися, ты победил")
                 break
             elif samp == 1 or samp == 2 or samp == 3:
@@ -46,12 +48,14 @@ def what(dif):
 
 
 
-if userI == "1" :
-    print("ти пидор")
-    what(1)
-elif userI == "2":
-    print ("ну вроде не дурак")
-elif userI == "3": 
-    print("теперь ты НАСТОЯЩИЙ МУЖИК")
-else : print("введите значение от 1 до 3")
+for i in range(0, 4):
+        
+    if userI == "1" :
+        print("ти пидор")
+        what(1)
+    elif userI == "2":
+        print ("ну вроде не дурак")
+    elif userI == "3": 
+        print("теперь ты НАСТОЯЩИЙ МУЖИК")
+    else : print("введите значение от 1 до 3")
 
